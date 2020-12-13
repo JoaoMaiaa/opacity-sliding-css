@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Opacity | sliding 2</title>
+</head>
+<body>
+
+    <h1 id="home" class="title"></h1>
+
+    <div class="top">
+        <div class="mani anime" id="contact">
+            <h1></h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia veniam, sequi, tempore, a placeat nobis dolorum omnis iusto numquam ratione modi? Repudiandae fugit alias id asperiores! Cupiditate quisquam a ad?</p>
+        </div>
+    </div>
+
+    <div class="top">
+        <div class="mani anime" id="about">
+            <h1></h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia veniam, sequi, tempore, a placeat nobis dolorum omnis iusto numquam ratione modi? Repudiandae fugit alias id asperiores! Cupiditate quisquam a ad?</p>
+        </div>
+    </div>
+
+    <div class="top">
+        <div class="mani anime" id="product">
+            <h1 ></h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia veniam, sequi, tempore, a placeat nobis dolorum omnis iusto numquam ratione modi? Repudiandae fugit alias id asperiores! Cupiditate quisquam a ad?</p>
+        </div>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(()=>{
+            $(window).on('scroll',function(){
+                let animeStart = 'anime-start';
+                let scroll = $(this).scrollTop();
+
+                let anime = $('.anime');
+
+                anime.each(function(){
+                    let item = $(this).offset().top;
+                    if(scroll > item - 150){
+                        $(this).addClass(animeStart);
+                        // console.log($(this));
+                    }else{
+                        // $(this).removeClass(animeStart);
+                    }
+                })
+            });
+        });
+    </script>
+</body>
+</html>
